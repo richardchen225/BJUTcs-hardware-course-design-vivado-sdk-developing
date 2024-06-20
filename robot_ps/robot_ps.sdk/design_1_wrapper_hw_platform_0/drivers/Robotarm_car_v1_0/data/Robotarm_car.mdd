@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER Robotarm_car
+	OPTION supported_peripherals = (Robotarm_car);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = Robotarm_car;
+END DRIVER

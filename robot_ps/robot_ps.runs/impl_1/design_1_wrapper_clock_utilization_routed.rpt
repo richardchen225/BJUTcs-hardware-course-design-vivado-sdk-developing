@@ -1,0 +1,438 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date              : Thu Jun 13 23:06:54 2024
+| Host              : RichardChen running 64-bit major release  (build 9200)
+| Command           : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+| Design            : design_1_wrapper
+| Device            : 7z020-clg484
+| Speed File        : -1  PRODUCTION 1.11 2014-09-11
+| Temperature Grade : C
+---------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X0Y0
+9. Net wise resources used in clock region X1Y0
+10. Net wise resources used in clock region X0Y1
+11. Net wise resources used in clock region X1Y1
+12. Net wise resources used in clock region X0Y2
+13. Net wise resources used in clock region X1Y2
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+-----------+
+| Type  | Used | Available | Num Fixed |
++-------+------+-----------+-----------+
+| BUFG  |    6 |        32 |         0 |
+| BUFH  |    0 |        72 |         0 |
+| BUFIO |    0 |        16 |         0 |
+| MMCM  |    1 |         4 |         0 |
+| PLL   |    0 |         4 |         0 |
+| BUFR  |    0 |        16 |         0 |
+| BUFMR |    0 |         8 |         0 |
++-------+------+-----------+-----------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------+
+|       |                                                                                                      |                                                                                                 |   Num Loads  |       |
++-------+------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+
+| Index | BUFG Cell                                                                                            | Net Name                                                                                        | BELs | Sites | Fixed |
++-------+------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+
+|     1 | design_1_i/clk_wiz_0/inst/clkf_buf                                                                   | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0                                     |    1 |     1 |    no |
+|     2 | cam_pclk_IBUF_BUFG_inst                                                                              | cam_pclk_IBUF_BUFG                                                                              |   33 |     8 |    no |
+|     3 | design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG_inst | design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG |   87 |    64 |    no |
+|     4 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk_BUFG_inst                    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk                         |  114 |    87 |    no |
+|     5 | design_1_i/clk_wiz_0/inst/clkout1_buf                                                                | design_1_i/clk_wiz_0/inst/clk_out1                                                              |  128 |   128 |    no |
+|     6 | design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG                               | design_1_i/processing_system7_0/inst/FCLK_CLK0                                                  | 5562 |  1718 |    no |
++-------+------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------+-------+-------+
+
+
++-------+-----------------------------------------+---------------------------------------------------------+--------------+-------+
+|       |                                         |                                                         |   Num Loads  |       |
++-------+-----------------------------------------+---------------------------------------------------------+------+-------+-------+
+| Index | MMCM Cell                               | Net Name                                                | BELs | Sites | Fixed |
++-------+-----------------------------------------+---------------------------------------------------------+------+-------+-------+
+|     1 | design_1_i/clk_wiz_0/inst/mmcm_adv_inst | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0 |    1 |     1 |    no |
+|     2 | design_1_i/clk_wiz_0/inst/mmcm_adv_inst | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0 |    1 |     1 |    no |
++-------+-----------------------------------------+---------------------------------------------------------+------+-------+-------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------+
+|       |                                                                                                |                                                                                                    |   Num Loads  |       |
++-------+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+-------+-------+
+| Index | Local Clk Src                                                                                  | Net Name                                                                                           | BELs | Sites | Fixed |
++-------+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+-------+-------+
+|     1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0    |    2 |     2 |    no |
+|     2 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1   | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0   |    2 |     2 |    no |
+|     3 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1   | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0   |    2 |     2 |    no |
+|     4 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1   | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0   |    2 |     2 |    no |
+|     5 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1   | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0   |    2 |     2 |    no |
+|     6 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1   | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0   |    2 |     2 |    no |
+|     7 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0    |    2 |     2 |    no |
+|     8 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0    |    2 |     2 |    no |
+|     9 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    10 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    11 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    12 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    13 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    14 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1    | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0    |    2 |     2 |    no |
+|    15 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    16 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    17 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    18 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    19 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    20 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    21 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    22 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0 |    2 |     2 |    no |
+|    23 | design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf_reg                      | design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf                              |   18 |     9 |    no |
+|    24 | design_1_i/rst_processing_system7_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] | design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]                                  |  107 |    90 |    no |
++-------+------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+-------+-------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  115 | 20000 |    0 |  4000 |    0 |    60 |   23 |    30 |    0 |    60 |
+| X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  116 | 25600 |    0 |  3400 |    0 |    60 |   29 |    30 |    0 |    40 |
+| X0Y1              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 | 2175 |  9600 |  112 |  1600 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y1              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1687 | 20800 |  128 |  3400 |    0 |    60 |   30 |    30 |    0 |    40 |
+| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  928 |  9600 |  114 |  1600 |    0 |    20 |    9 |    10 |    0 |    20 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  326 | 20800 |    8 |  3400 |    0 |    60 |   27 |    30 |    0 |    40 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites.
+
+
+8. Net wise resources used in clock region X0Y0
+-----------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                              Clock Net Name                             |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X0Y8  |   no  |         0 |        0 |       0 |        23 |       0 |       0 |   0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1                                      |
+| BUFG        | BUFHCE_X0Y0  |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0             |
+| BUFG        | BUFHCE_X0Y10 |   no  |         0 |        0 |       0 |        23 |       0 |       0 |  34 |     0 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0                          |
+| BUFG        | BUFHCE_X0Y9  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  62 |     0 |        0 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+
+
+9. Net wise resources used in clock region X1Y0
+-----------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                              Clock Net Name                             |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X1Y8  |   no  |         0 |        0 |       0 |        29 |       0 |       0 |   0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1                                      |
+| BUFG        | BUFHCE_X1Y9  |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  52 |     0 |        0 | design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk |
+| BUFG        | BUFHCE_X1Y10 |   no  |         0 |        0 |       0 |        29 |       0 |       0 |  57 |     0 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0                          |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-------------------------------------------------------------------------+
+
+
+10. Net wise resources used in clock region X0Y1
+------------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                          Clock Net Name                                         |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X0Y20 |   no  |         0 |        0 |       0 |        10 |       0 |       0 |    0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1                                                              |
+| BUFG        | BUFHCE_X0Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   11 |     0 |        0 | design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG |
+| BUFG        | BUFHCE_X0Y22 |   no  |         0 |        0 |       0 |        10 |       0 |       0 | 2154 |   112 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0                                                  |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+
+
+11. Net wise resources used in clock region X1Y1
+------------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                          Clock Net Name                                         |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+| BUFG        | BUFHCE_X1Y20 |   no  |         0 |        0 |       0 |        30 |       0 |       0 |    0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1                                                              |
+| BUFG        | BUFHCE_X1Y22 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   33 |     0 |        0 | cam_pclk_IBUF_BUFG                                                                              |
+| BUFG        | BUFHCE_X1Y21 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   76 |     0 |        0 | design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG |
+| BUFG        | BUFHCE_X1Y23 |   no  |         0 |        0 |       0 |        30 |       0 |       0 | 1572 |   128 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0                                                  |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-------------------------------------------------------------------------------------------------+
+
+
+12. Net wise resources used in clock region X0Y2
+------------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                 Clock Net Name                 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+| BUFG        | BUFHCE_X0Y32 |   no  |         0 |        0 |       0 |         9 |       0 |       0 |   0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1             |
+| BUFG        | BUFHCE_X0Y33 |   no  |         0 |        0 |       0 |         9 |       0 |       0 | 928 |   114 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+
+
+13. Net wise resources used in clock region X1Y2
+------------------------------------------------
+
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+| Source Type | BUFHCE Site  | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                 Clock Net Name                 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+| BUFG        | BUFHCE_X1Y32 |   no  |         0 |        0 |       0 |        27 |       0 |       0 |   0 |     0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1             |
+| BUFG        | BUFHCE_X1Y33 |   no  |         0 |        0 |       0 |        27 |       0 |       0 | 326 |     8 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
++-------------+--------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+------------------------------------------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y3 [get_cells cam_pclk_IBUF_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y0 [get_cells design_1_i/clk_wiz_0/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y4 [get_cells design_1_i/clk_wiz_0/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y2 [get_cells design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y1 [get_cells design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y16 [get_cells design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+set_property LOC MMCME2_ADV_X0Y0 [get_cells design_1_i/clk_wiz_0/inst/mmcm_adv_inst]
+
+# Location of BUFH Clock Primitives
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+
+# Location of IO Primitives which is load of clock spine
+set_property LOC IOB_X0Y21 [get_cells res_OBUF_inst]
+
+# Location of clock ports
+set_property LOC IOB_X1Y29 [get_ports cam_pclk]
+set_property LOC IOB_X0Y26 [get_ports clk_in1]
+
+# Clock net "cam_pclk_IBUF_BUFG" driven by instance "cam_pclk_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y3"
+#startgroup
+create_pblock {CLKAG_cam_pclk_IBUF_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_cam_pclk_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="cam_pclk_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_cam_pclk_IBUF_BUFG}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf" driven by instance "design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf_reg" located at site "SLICE_X31Y60"
+#startgroup
+create_pblock {CLKAG_design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/OLED_IP_0/inst/OLED_IP_v1_0_S00_AXI_inst/OLED_test/SCL_buf}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "design_1_i/clk_wiz_0/inst/clk_out1" driven by instance "design_1_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock {CLKAG_design_1_i/clk_wiz_0/inst/clk_out1}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/clk_wiz_0/inst/clk_out1"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG" driven by instance "design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG_inst" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_dvp_bram_0/inst/ov5640_dvp_bram_v1_0_S00_AXI_inst/dbram/cmos_frame_valid_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1" located at site "SLICE_X43Y36"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[0]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1" located at site "SLICE_X47Y38"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[10]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1" located at site "SLICE_X46Y37"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[11]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1" located at site "SLICE_X50Y37"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[12]_LDC_i_1_n_0}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1" located at site "SLICE_X48Y33"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[13]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1" located at site "SLICE_X50Y39"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[14]_LDC_i_1_n_0}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1" located at site "SLICE_X42Y33"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[1]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1" located at site "SLICE_X44Y39"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[2]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1" located at site "SLICE_X49Y34"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[3]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1" located at site "SLICE_X41Y37"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[4]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1" located at site "SLICE_X43Y38"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[5]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1" located at site "SLICE_X43Y38"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[7]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1" located at site "SLICE_X48Y36"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[8]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1" located at site "SLICE_X39Y38"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_addr_reg_reg[9]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk_BUFG_inst" located at site "BUFGCTRL_X0Y1"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_clk}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1" located at site "SLICE_X50Y33"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[0]_LDC_i_1_n_0}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1" located at site "SLICE_X45Y33"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[1]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1" located at site "SLICE_X40Y33"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[2]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1" located at site "SLICE_X47Y39"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[3]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1" located at site "SLICE_X41Y36"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[4]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1" located at site "SLICE_X40Y34"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[5]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1" located at site "SLICE_X45Y34"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[6]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0" driven by instance "design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1" located at site "SLICE_X43Y34"
+#startgroup
+create_pblock {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/ov5640_sccb_0/inst/ov5640_sccb_v1_0_S00_AXI_inst/wr/sccb_data_wr_reg_reg[7]_LDC_i_1_n_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "design_1_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y16"
+#startgroup
+create_pblock {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/processing_system7_0/inst/FCLK_CLK0"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]" driven by instance "design_1_i/rst_processing_system7_0_100M/U0/ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0]" located at site "SLICE_X30Y64"
+#startgroup
+create_pblock {CLKAG_design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=res_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_design_1_i/rst_processing_system7_0_100M/U0/peripheral_aresetn[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+#endgroup

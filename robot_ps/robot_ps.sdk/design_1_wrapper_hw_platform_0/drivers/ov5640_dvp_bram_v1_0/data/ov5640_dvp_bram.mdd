@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER ov5640_dvp_bram
+	OPTION supported_peripherals = (ov5640_dvp_bram);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = ov5640_dvp_bram;
+END DRIVER

@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER ov5640_sccb
+	OPTION supported_peripherals = (ov5640_sccb);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = ov5640_sccb;
+END DRIVER
